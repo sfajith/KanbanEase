@@ -3,14 +3,14 @@ import { Containers } from "./Containers";
 import {NewContainer} from './NewContainer'
 
 export function Kanban() {
-  const [containers, setContainers] = useState([{id: 0, title: "Por Hacer", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 0, text: "Crear portafolio", editor: true, color: 'bg-gray-200', modificar: false}],}, {id: 1, title: "Haciendo", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 1, text: "Desplegar app", editor: true, color: 'bg-gray-200', modificar: false}, { id: 3, text: "Debuggin KanbanEase", editor: true, color: 'bg-gray-200', modificar: false}],}, {id: 2, title: "Por Hacer", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 2, text: "Commit kanbanEase", editor: true, color: 'bg-gray-200', modificar: false}],} ]);
+  const [containers, setContainers] = useState([{id: 0, title: "Por Hacer", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 0, text: "Crear portafolio", editor: true, color: 'bg-gray-200', modificar: false}],}, {id: 1, title: "Haciendo", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 1, text: "Desplegar app", editor: true, color: 'bg-gray-200', modificar: false}, { id: 3, text: "Debuggin KanbanEase", editor: true, color: 'bg-gray-200', modificar: false}],}, {id: 2, title: "Hecho", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 2, text: "Commit kanbanEase", editor: true, color: 'bg-gray-200', modificar: false}],} ]);
   const [trigger, setTrigger] = useState({triggerForm: true, triggerBtn: true});
   const [texts, setTexts] = useState(""); //un estado para tomar el valor de los enventos e.target.value de los inputs
   const [title, setTitle] = useState({title:'', contenedor:''})
   const [titleCard, setTitleCard] = useState({title:'', carta:'', conte:''})
   const [editCard, setEditCard] = useState(true)
-  const idContainer = useRef(1);
-  const idCards = useRef(1); 
+  const idContainer = useRef(2);
+  const idCards = useRef(3); 
   const formRefs = useRef({})
   const containerRefs = useRef(null)
   const titleRefs = useRef({})
