@@ -3,7 +3,7 @@ import { Containers } from "./Containers";
 import {NewContainer} from './NewContainer'
 
 export function Kanban() {
-  const [containers, setContainers] = useState([{id: 0, title: "Por Hacer", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 0, text: "Crear portafolio", editor: true, color: 'bg-gray-200', modificar: false}],},]);
+  const [containers, setContainers] = useState([{id: 0, title: "Por Hacer", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 0, text: "Crear portafolio", editor: true, color: 'bg-gray-200', modificar: false}],}, {id: 1, title: "Haciendo", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 1, text: "Desplegar app", editor: true, color: 'bg-gray-200', modificar: false}, { id: 3, text: "Debuggin KanbanEase", editor: true, color: 'bg-gray-200', modificar: false}],}, {id: 2, title: "Por Hacer", edit: false, isFormVisible: true, isBtnVisible: false, cards: [{ id: 2, text: "Commit kanbanEase", editor: true, color: 'bg-gray-200', modificar: false}],} ]);
   const [trigger, setTrigger] = useState({triggerForm: true, triggerBtn: true});
   const [texts, setTexts] = useState(""); //un estado para tomar el valor de los enventos e.target.value de los inputs
   const [title, setTitle] = useState({title:'', contenedor:''})
@@ -319,11 +319,11 @@ export function Kanban() {
   }; //funcion handledrag
 
   return (
-    <div>
+    <div className="h-5/6">
       <div className="bg-gray-800 bg-opacity-70 pl-10">
-      <img src="/logo.png" width='232' height='48'/>
+      <img src="logo.png" width='232' height='48'/>
       </div>
-    <div className="flex items-start overflow-x-auto whitespace-nowrap ">
+    <div className="flex items-start overflow-x-auto whitespace-nowrap h-full pr-10">
       <Containers
         containers={containers}
         addContainer={addContainer}
