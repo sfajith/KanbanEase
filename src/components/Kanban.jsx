@@ -321,7 +321,7 @@ export function Kanban() {
   return (
     <div>
       <div className="bg-gray-800 bg-opacity-70 pl-10">
-      <img src="public/logo.png" width='232' height='48'></img>
+      <img src="public/logo.png" width='232' height='48'/>
       </div>
     <div className="flex items-start overflow-x-auto whitespace-nowrap ">
       <Containers
