@@ -123,10 +123,11 @@ export function Kanban() {
 
 
   const deleteContainer = (containerValue) => {
-    const newContainer = [...containers];
-    const deleteContainer = newContainer.splice(containerValue, 1);
-    setContainers(newContainer);
+    const copyContainers = containers.filter((container) => container.id !== containerValue);
+    setContainers(copyContainers);
+      
   };
+  
 
 
   const deleteCard = (containerId, cardIndex) => {

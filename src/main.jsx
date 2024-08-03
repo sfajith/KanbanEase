@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {Kanban} from './components/Kanban'       // Hoja de estilos base
+import {Kanban} from './components/Kanban'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
