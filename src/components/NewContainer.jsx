@@ -7,7 +7,7 @@ export function NewContainer({triggerHandler, idContainer, addContainer, trigger
       
       <div ref={containerRefs}  className={`flex flex-col ${!trigger.triggerForm ? "" : "hidden"}`}>
           <textarea
-            placeholder="Introduce el titulo de la lista..."
+            placeholder="Enter the list title..."
             className=" bg-gray-500 bg-opacity-50 rounded-xl h-10 resize-none p-1 text-gray-50 border border-gray-500 border-opacity-0 focus:border-blue-400 focus:outline-none mt-1 placeholder:text-gray-100"
             onKeyDown={(e) =>{
                 if(e.key === 'Enter'){
@@ -24,7 +24,7 @@ export function NewContainer({triggerHandler, idContainer, addContainer, trigger
               className="bg-blue-400 p-1 flex items-center rounded text-gray-50 hover:bg-blue-300 mr-4 w-2/4 font-semibold"
               onClick={()=>{addContainer(idContainer)}}
             >
-              <FaPlus /> Añadir Lista
+              <FaPlus /> Add List
             </button>
             <button className="text-gray-50 hover:rotate-12" onClick={()=>{triggerHandler()}}>
               <RiCloseLargeLine />
@@ -37,7 +37,7 @@ export function NewContainer({triggerHandler, idContainer, addContainer, trigger
                     triggerHandler(idContainer)
                   }}
                 >
-                  <FaPlus /> Añade una Lista
+                  <FaPlus /> Add a List
         </button>
     </>
   )

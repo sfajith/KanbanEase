@@ -6,7 +6,7 @@ export function Form({addCard, container, inputHandle, toggleHandler, formRefs})
     <>
          <div ref={(el) => formRefs.current[container.id] = el} className={`flex flex-col ${!container.isFormVisible ? "" : "hidden"}`}>
           <textarea 
-            placeholder="Introduce un nombre para esta tarjeta..."
+            placeholder="Enter a name for this card..."
             className=" bg-gray-50 bg-opacity-60 rounded-xl resize-none p-1 text-gray-700 border border-gray-500 border-opacity-0 focus:border-blue-400 focus:outline-none mt-1 placeholder:text-gray-400"
             onChange={(e) => {
               inputHandle(e);
@@ -23,7 +23,7 @@ export function Form({addCard, container, inputHandle, toggleHandler, formRefs})
               className="bg-blue-400 p-1 flex items-center rounded text-gray-50 hover:bg-blue-300 mr-4 w-2/4 font-semibold"
               onClick={()=>{addCard(container.id)}}
             >
-              <FaPlus  /> Añadir Tarjeta
+              <FaPlus  /> Add Card
             </button>
             <button className="text-gray-800 hover:rotate-12" onClick={()=>{toggleHandler(container.id)}}>
               <RiCloseLargeLine />
@@ -36,7 +36,7 @@ export function Form({addCard, container, inputHandle, toggleHandler, formRefs})
                     toggleHandler(container.id)
                   }}
                 >
-                  <FaPlus /> Añade una tarjeta
+                  <FaPlus /> Add a card
                 </button>
     </>
   )
